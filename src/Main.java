@@ -11,8 +11,8 @@ public class Main {
 		// Per estrarre un carattere dalla stringa potete usare il metodo charAt es: s = "pippo" char c = s.charAt(0) -> 'p'
 
 		boolean palindroma = true;
-		for(int i = 0; i < s.length(); i++) {
-			if(s.charAt(i) != s.charAt(s.length() - i - 1)) {
+		for(int i = 0, j = s.length() -1 ; i < j; i++, j--) {
+			if(s.charAt(i) != s.charAt(j)) {
 				palindroma = false;
 				break;
 			}
