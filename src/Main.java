@@ -1,6 +1,6 @@
 /*
 	Scrivere un applicazione che data una stringa in ingresso riconosca se sia palindroma o meno
-*/
+ */
 import java.util.Scanner;
 
 public class Main {
@@ -9,5 +9,18 @@ public class Main {
 		System.out.print("Inserire la parola da controllare ");
 		String s = input.nextLine();
 		// Per estrarre un carattere dalla stringa potete usare il metodo charAt es: s = "pippo" char c = s.charAt(0) -> 'p'
+
+		boolean palindroma = true;
+		for(int i = 0; i < s.length(); i++) {
+			if(s.charAt(i) != s.charAt(s.length() - i - 1)) {
+				palindroma = false;
+				break;
+			}
+		}
+		if(palindroma) {
+			System.out.println("La parola è palindroma");
+		} else {
+			System.out.println("La parola non è palindroma");
+		}
 	}
 }
